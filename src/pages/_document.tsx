@@ -15,7 +15,6 @@ export default class MyDocuments extends Document {
             href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap"
             rel="stylesheet"
           />
-          <script src="https://sdk.mercadopago.com/js/v2" />
         </Head>
         <body>
           <Main />
