@@ -1,7 +1,6 @@
-import { Box, Button, Flex, Icon, Text } from '@chakra-ui/react';
+import { Button, Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { telescopeIcon } from '../../utils/icons';
 
 export function Header() {
   return (

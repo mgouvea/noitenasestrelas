@@ -1,14 +1,6 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Icon,
-  Text,
-  useBreakpointValue,
-} from '@chakra-ui/react';
+import { Box, Button, Flex, Text, useBreakpointValue } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { telescopeIcon } from '../../utils/icons';
 
 export function NavbarInscricao() {
   const isWideVersion = useBreakpointValue({

@@ -1,11 +1,8 @@
-import { Box, Divider, Flex, Icon, Text } from '@chakra-ui/react';
+import { Box, Divider, Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import { Header } from '../components/Header';
+import { useState } from 'react';
 import { NavbarInscricao } from '../components/Header/NavbarInscricao';
 import { InscricaoForm } from '../components/InscricaoForm';
-import { api } from '../services/api';
-import { starIcon } from '../utils/icons';
 
 export default function Inscricao() {
   const [valuePix, setValuePix] = useState(185);
@@ -14,15 +11,15 @@ export default function Inscricao() {
   const [adult, setAdult] = useState(1);
   const [pagando, setPagando] = useState(false);
 
-  async function fetchData() {
-    if (pagando) {
-      const response = await api.post('/inscricao');
-    }
-  }
+  // async function fetchData() {
+  //   if (pagando) {
+  //     const response = await api.post('/inscricao');
+  //   }
+  // }
 
-  useEffect(() => {
-    fetchData();
-  }, [pagando]);
+  // useEffect(() => {
+  //   fetchData();
+  // }, [pagando]);
   return (
     <Box overflowX="hidden">
       <NavbarInscricao />

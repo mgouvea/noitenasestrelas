@@ -1,13 +1,10 @@
 import {
-  Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
   Box,
-  Text,
   Flex,
-  Container,
 } from '@chakra-ui/react';
 
 interface ItemProps {
