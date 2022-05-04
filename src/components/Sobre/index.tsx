@@ -38,11 +38,21 @@ export function Sobre() {
           <SimpleGrid columns={[1, null, 2]}>
             {isWideVersion ? (
               <Box>
-                <Image src="/imgSobre.png" width="570px" height="355px" />
+                <Image
+                  src="/imgSobre.png"
+                  width="570px"
+                  height="355px"
+                  alt="Telescopio"
+                />
               </Box>
             ) : (
               <Box px="1.5rem">
-                <Image src="/imgSobre.png" width="370px" height="255px" />
+                <Image
+                  src="/imgSobre.png"
+                  width="370px"
+                  height="255px"
+                  alt="Telescopio"
+                />
               </Box>
             )}
             <Flex

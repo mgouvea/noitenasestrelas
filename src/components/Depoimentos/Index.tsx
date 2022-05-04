@@ -107,7 +107,7 @@ export function Depoimentos() {
               <TestimonialContent>
                 <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
                 <TestimonialText>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Loremm ipsum dolor sit amet, consectetur adipiscing elit.
                   Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
                 </TestimonialText>
               </TestimonialContent>
@@ -121,7 +121,7 @@ export function Depoimentos() {
             </Testimonial>
             <Testimonial>
               <TestimonialContent>
-                <TestimonialHeading>“Amamos cada momento”</TestimonialHeading>
+                <TestimonialHeading>Amamos cada momento</TestimonialHeading>
                 <TestimonialText>
                   Temos dois filhos, o caçula pequeno não foi, então fui com
                   minha fila mais velha, Emanuella. Foi uma experiência ímpar!
@@ -142,10 +142,10 @@ export function Depoimentos() {
             <Testimonial>
               <TestimonialContent>
                 <TestimonialHeading>
-                  "Eu nunca tinha visto algo assim"
+                  Eu nunca tinha visto algo assim!
                 </TestimonialHeading>
                 <TestimonialText>
-                  “Fui no evento para comemorar o Dia dos Pais juntamente com a
+                  Fui no evento para comemorar o Dia dos Pais juntamente com a
                   minha filha de 6 anos. Eu e ela curtimos muito estar juntos
                   para ver o céu estrelado, foi super bacana. O momento mais
                   marcante foi quando minha filha foi observar a Lua através do
@@ -153,7 +153,7 @@ export function Depoimentos() {
                   tão forte que vi o rosto dela todo iluminado. Ela ficou
                   extremamente encantada! “Nossa, pai! Que lindo, eu nunca tinha
                   visto algo assim!”. Esse momento ficou gravado na minha
-                  memória. Com certeza iremos novamente no próximo!”
+                  memória. Com certeza iremos novamente no próximo!
                 </TestimonialText>
               </TestimonialContent>
               <TestimonialAvatar
