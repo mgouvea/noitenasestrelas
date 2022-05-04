@@ -81,10 +81,7 @@ const TestimonialAvatar = ({
       <Stack spacing={-1} align={'center'}>
         <Text fontWeight={600}>{name}</Text>
         {title ? (
-          <Text
-            fontSize={'sm'}
-            color={useColorModeValue('gray.600', 'gray.800')}
-          >
+          <Text fontSize={'sm'} color="gray.600">
             {title}
           </Text>
         ) : null}

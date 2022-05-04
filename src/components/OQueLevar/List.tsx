@@ -95,7 +95,7 @@ export function List() {
           cursor: 'pointer',
         }}
       >
-        Garrafa d'água
+        Garrafa dágua
       </ListItem>
       <ListItem
         _hover={{

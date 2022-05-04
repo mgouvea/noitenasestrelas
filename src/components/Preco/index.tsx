@@ -2,6 +2,7 @@ import {
   Button,
   Divider,
   Flex,
+  Link,
   SimpleGrid,
   Text,
   useBreakpointValue,
@@ -137,9 +138,15 @@ export function Preco() {
               </Text>
             </Flex>
             <Flex w="300px" align="center" justify="center" ml="1.7rem">
-              <Button colorScheme="blue" fontSize="3xl">
-                Inscreva-se
-              </Button>
+              <Link
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc0r0j_suHnpDARrOl71udxz3x0pPqHgofZD5xM9xVX-F9bzg/viewform"
+                isExternal
+                _hover={{ textDecoration: 'none' }}
+              >
+                <Button colorScheme="blue" fontSize="3xl">
+                  Inscreva-se
+                </Button>
+              </Link>
             </Flex>
             <Flex
               w="300px"

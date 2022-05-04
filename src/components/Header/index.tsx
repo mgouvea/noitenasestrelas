@@ -1,6 +1,6 @@
-import { Button, Flex, Text } from '@chakra-ui/react';
+import { Button, Flex, Text, Link } from '@chakra-ui/react';
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 export function Header() {
   return (
@@ -78,14 +78,14 @@ export function Header() {
             Contato
           </Text>
         </Flex>
-        {/* <Button
-          cursor="pointer"
-          // _hover={{ color: 'highlighticons' }}
-          colorScheme="blue"
+        <Link
+          href="https://docs.google.com/forms/d/e/1FAIpQLSc0r0j_suHnpDARrOl71udxz3x0pPqHgofZD5xM9xVX-F9bzg/viewform"
+          isExternal
+          _hover={{ textDecoration: 'none' }}
         >
-          Inscrição
-        </Button> */}
-        <Link href="/inscricao" passHref>
+          <Button colorScheme="blue">Inscrição</Button>
+        </Link>
+        {/* <Link href="/inscricao" passHref>
           <a>
             <Button
               // as="a"
@@ -97,7 +97,7 @@ export function Header() {
               Inscrição
             </Button>
           </a>
-        </Link>
+        </Link> */}
       </Flex>
     </Flex>
   );

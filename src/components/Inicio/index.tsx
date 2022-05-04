@@ -3,6 +3,7 @@ import {
   Button,
   Flex,
   Heading,
+  Link,
   SimpleGrid,
   Text,
   useBreakpointValue,
@@ -35,15 +36,21 @@ export function Inicio() {
         <Flex ml={[null, '7rem']} mb="10rem">
           <Box w="157px" h="157px">
             <Image src="/logo.png" width="157px" height="157px" />
-            <Button
-              mt="4rem"
-              ml="0.5rem"
-              fontSize="xl"
-              size="lg"
-              colorScheme="blue"
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSc0r0j_suHnpDARrOl71udxz3x0pPqHgofZD5xM9xVX-F9bzg/viewform"
+              isExternal
+              _hover={{ textDecoration: 'none' }}
             >
-              Inscreva-se
-            </Button>
+              <Button
+                mt="4rem"
+                ml="0.5rem"
+                fontSize="xl"
+                size="lg"
+                colorScheme="blue"
+              >
+                Inscreva-se
+              </Button>
+            </Link>
           </Box>
           <Box ml="1rem" mt="0.8rem">
             <Heading fontSize="5xl">Noite nas Estrelas</Heading>
