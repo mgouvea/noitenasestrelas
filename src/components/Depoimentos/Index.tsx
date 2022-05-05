@@ -102,8 +102,9 @@ export function Depoimentos() {
           <Stack
             direction={{ base: 'column', md: 'row' }}
             spacing={{ base: 10, md: 4, lg: 10 }}
+            justify="center"
           >
-            <Testimonial>
+            {/* <Testimonial>
               <TestimonialContent>
                 <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
                 <TestimonialText>
@@ -118,7 +119,7 @@ export function Depoimentos() {
                 name={'Jane Cooper'}
                 title={'CEO at ABC Corporation'}
               />
-            </Testimonial>
+            </Testimonial> */}
             <Testimonial>
               <TestimonialContent>
                 <TestimonialHeading>Amamos cada momento</TestimonialHeading>

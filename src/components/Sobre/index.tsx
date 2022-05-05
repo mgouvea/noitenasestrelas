@@ -60,6 +60,7 @@ export function Sobre() {
               w={['22rem', '28.4rem']}
               ml={['1.2rem', '5rem']}
               align="center"
+              justify="center"
               mt="1rem"
             >
               <Heading

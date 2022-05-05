@@ -6,7 +6,7 @@ import {
 
 export function List() {
   return (
-    <UnorderedList fontSize="1rem" fontWeight="400">
+    <UnorderedList fontSize={['1.12rem', '1rem']} fontWeight="400">
       <ListItem
         _hover={{
           color: 'highlighticons',

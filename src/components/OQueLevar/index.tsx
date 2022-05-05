@@ -3,22 +3,27 @@ import { List } from './List';
 
 export function OQLevar() {
   return (
-    <Flex h="91vh" bgImage="/fundoSobre.svg">
+    <Flex h={[null, '93vh']} bgImage="/fundoSobre.svg">
       <Flex bg="bgFundoSobre2" w="100%">
         <SimpleGrid columns={[1, 2]} w="100%">
-          <Flex direction="column" align="center" justify="center">
+          <Flex
+            direction="column"
+            align="center"
+            justify="center"
+            my={['1.5rem', null]}
+          >
             <Text
               mb="1rem"
               fontWeight="bold"
-              fontSize="1.9rem"
-              w="26rem"
+              fontSize={['1.5rem', '1.9rem']}
+              w={['20rem', '26rem']}
               textAlign="center"
             >
               O que eu preciso levar para o acampamento?
             </Text>
             <Flex
-              w="28.44rem"
-              h="28.75rem"
+              w={['25rem', '28.44rem']}
+              h={['36rem', '28.75rem']}
               borderRadius="0.3rem"
               bg="bgFundoPreco"
             >
@@ -46,20 +51,26 @@ export function OQLevar() {
             <Text
               mb="1rem"
               fontWeight="bold"
-              fontSize="2rem"
-              w="27rem"
               textAlign="center"
+              fontSize={['1.5rem', '2rem']}
+              w={['20rem', '27rem']}
             >
               Imagens obtidas com nosso super telescópio!
             </Text>
             <SimpleGrid
-              columns={[1, 2]}
+              columns={[2, 2]}
               spacing={10}
-              w="28rem"
-              h="28rem"
+              w={['23rem', '28rem']}
+              h={['30rem', '28rem']}
               mb="2rem"
+              ml={['2rem', null]}
             >
-              <Flex direction="column" w="12rem" h="12rem" borderRadius="100%">
+              <Flex
+                direction="column"
+                w={['9rem', '12rem']}
+                h="12rem"
+                borderRadius="100%"
+              >
                 <Image src="/Jupiter.svg" borderRadius="100%" border="1px" />
                 <Text
                   fontSize="1rem"
@@ -70,7 +81,12 @@ export function OQLevar() {
                   Jupiter e suas luas
                 </Text>
               </Flex>
-              <Flex direction="column" w="12rem" h="12rem" borderRadius="100%">
+              <Flex
+                direction="column"
+                w={['9rem', '12rem']}
+                h="12rem"
+                borderRadius="100%"
+              >
                 <Image src="/Saturno.svg" borderRadius="100%" border="1px" />
                 <Text
                   fontSize="1rem"
@@ -81,7 +97,12 @@ export function OQLevar() {
                   Saturno
                 </Text>
               </Flex>
-              <Flex direction="column" w="12rem" h="12rem" borderRadius="100%">
+              <Flex
+                direction="column"
+                w={['9rem', '12rem']}
+                h="12rem"
+                borderRadius="100%"
+              >
                 <Image src="/Pleiades.svg" borderRadius="100%" border="1px" />
                 <Text
                   fontSize="1rem"
@@ -92,7 +113,12 @@ export function OQLevar() {
                   Aglomerado das Pleiades
                 </Text>
               </Flex>
-              <Flex direction="column" w="12rem" h="12rem" borderRadius="100%">
+              <Flex
+                direction="column"
+                w={['9rem', '12rem']}
+                h="12rem"
+                borderRadius="100%"
+              >
                 <Image src="/Lua.svg" borderRadius="100%" border="1px" />
                 <Text
                   fontSize="1rem"
