@@ -4,7 +4,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 const responsive = {
-  0: { items: 1 },
+  0: { items: 2 },
   568: { items: 3 },
   1024: { items: 5 },
 };

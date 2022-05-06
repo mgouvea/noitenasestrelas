@@ -30,6 +30,7 @@ export function Sobre() {
       bgImage="/fundoSobre.svg"
       borderTop="1px"
       borderColor="orange.500"
+      id="sobre"
     >
       <Box bg="rgba(33,80,116,0.5)" pb="0.5rem">
         {/* imagem e texto */}

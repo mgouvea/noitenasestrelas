@@ -24,6 +24,7 @@
     "react-hook-form": "^7.30.0",
     "react-icons": "^4.3.1",
     "react-id-swiper": "^4.0.0",
+    "react-scroll": "^1.8.7",
     "react-sdk-mercadopago": "^1.1.1",
     "yup": "^0.32.11"
   },

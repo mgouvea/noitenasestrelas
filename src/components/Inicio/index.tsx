@@ -22,7 +22,6 @@ export function Inicio() {
       // borderColor="white"
       // h="63vh"
       h={[null, '43.25rem']}
-      mt="4.1rem"
       // bgImage="/wallpaperflare.svg"
       bgImage="url('https://images.unsplash.com/photo-1651707910327-b8cd0b093ee1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1007&q=80')"
       bgSize="cover"
