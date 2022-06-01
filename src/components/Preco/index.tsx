@@ -7,6 +7,7 @@ import {
   Text,
   useBreakpointValue,
 } from '@chakra-ui/react';
+import Jump from 'react-reveal/Jump';
 
 export function Preco() {
   const isWideVersion = useBreakpointValue({
@@ -143,9 +144,11 @@ export function Preco() {
                 isExternal
                 _hover={{ textDecoration: 'none' }}
               >
-                <Button colorScheme="blue" fontSize="3xl">
-                  Inscreva-se
-                </Button>
+                <Jump>
+                  <Button colorScheme="blue" fontSize="3xl">
+                    Inscreva-se
+                  </Button>
+                </Jump>
               </Link>
             </Flex>
             <Flex

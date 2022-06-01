@@ -9,6 +9,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react';
 import Image from 'next/image';
+import { GetServerSideProps } from 'next';
 
 export function Inicio() {
   const isWideVersion = useBreakpointValue({

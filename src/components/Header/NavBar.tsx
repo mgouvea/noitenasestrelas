@@ -87,7 +87,8 @@ export function NavBar() {
           </HStack>
           {isWideVersion ? (
             <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSc0r0j_suHnpDARrOl71udxz3x0pPqHgofZD5xM9xVX-F9bzg/viewform"
+              // href="https://docs.google.com/forms/d/e/1FAIpQLSc0r0j_suHnpDARrOl71udxz3x0pPqHgofZD5xM9xVX-F9bzg/viewform"
+              href="/inscricao"
               passHref
             >
               <a target="_blank">

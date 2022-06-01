@@ -42,6 +42,7 @@ export default function Inscricao() {
             kidProps={kid}
             adultProps={adult}
             pagandoProps={pagando}
+            valuePixProps={valuePix}
           />
         </Flex>
         <Box w="55vw">

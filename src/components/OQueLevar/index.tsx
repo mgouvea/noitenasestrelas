@@ -1,5 +1,6 @@
 import { Box, Flex, Image, SimpleGrid, Text } from '@chakra-ui/react';
 import { List } from './List';
+import Bounce from 'react-reveal/Bounce';
 
 export function OQLevar() {
   return (
@@ -42,7 +43,9 @@ export function OQLevar() {
                   ITENS:
                 </Text>
                 <Flex mt="2rem" align="center" justify="center" px="3rem">
-                  <List />
+                  <Bounce bottom cascade>
+                    <List />
+                  </Bounce>
                 </Flex>
               </Box>
             </Flex>

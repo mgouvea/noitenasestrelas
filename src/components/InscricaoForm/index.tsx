@@ -24,6 +24,8 @@ import { TextAreaInput } from '../Forms/TextAreaInput';
 import { useState } from 'react';
 import { SelectInput } from '../Forms/SelectInput';
 import { AiOutlinePlus as plus } from 'react-icons/ai';
+import { useMutation } from 'react-query';
+import { api } from '../../services/api';
 
 const createInscricaoFormSchema = yup.object().shape({
   nome: yup.string().required('Nome obrigatório'),
@@ -85,6 +87,25 @@ type CreateInscricaoForm = {
   obs?: string;
 };
 
+type IdentificationPayerPix = {
+  type: string;
+  number: string;
+};
+
+type PayerPix = {
+  first_name: string;
+  last_name: string;
+  email: string;
+  identification: IdentificationPayerPix;
+};
+
+type createInscricaoPix = {
+  transaction_amount: number;
+  payment_method_id: string;
+  payer: PayerPix;
+  description: string;
+};
+
 const participacaoPlural = [
   'Sim, todos nós já participamos',
   'Alguns de nós já participaram',
@@ -104,6 +125,7 @@ export function InscricaoForm({
   kidProps,
   adultProps,
   pagandoProps,
+  valuePixProps,
 }) {
   const [counter, setCounter] = useState(1);
   const [newUser, setNewUser] = useState([]);
@@ -113,6 +135,15 @@ export function InscricaoForm({
   const [kid, setKid] = useState(0);
   const [adult, setAdult] = useState(0);
   const [pagando, setPagando] = useState(false);
+  const [result, setResult] = useState();
+
+  const createInscricao = useMutation(async (inscricao: createInscricaoPix) => {
+    const response = await api.post('', {
+      ...inscricao,
+    });
+
+    return response.data.inscricao;
+  });
 
   const { register, handleSubmit, formState } = useForm({
     resolver: yupResolver(createInscricaoFormSchema),
@@ -127,41 +158,28 @@ export function InscricaoForm({
     setPagando(pagandoProps);
     setPropsPagando(true);
     // await new Promise((resolve) => setTimeout(resolve, 1000));
-    // const formatterValues = {
-    //   // cod: Number(values.cod),
-    //   // tipoMariri: values.tipoMariri,
-    //   // tipoChacrona: values.tipoChacrona,
-    //   // qtd: Number(values.qtd),
-    //   // dataPreparo: new Date(values.dataPreparo),
-    //   // dataEntrada: new Date(values.dataEntrada),
-    //   // npreparo: values.npreparo,
-    //   // mpreparo: values.mpreparo,
-    //   // origemMariri: values.origemMariri,
-    //   // origemChacrona: values.origemChacrona,
-    //   // obs: values.obs,
-    //   // qtdAtual: Number(values.qtd),
-    // };
-    // try {
-    //   // console.log(values);
-    //   // if (data.map((i) => i.cod).includes(formatterValues.cod)) {
-    //   //   toast({
-    //   //     title: `ID ${formatterValues.cod} já cadastrado!`,
-    //   //     status: 'error',
-    //   //     isClosable: true,
-    //   //   });
-    //   // }
-    //   // else {
-    //   //   await createVegetal.mutateAsync(formatterValues);
-    //   //   toast({
-    //   //     title: `Vegetal ${formatterValues.cod} cadastrado com sucesso!`,
-    //   //     status: 'success',
-    //   //     isClosable: true,
-    //   //   });
-    //   //   routes.push('/vegetal');
-    //   // }
-    // } catch (err) {
-    //   console.log('error', err.message);
-    // }
+    console.log(values);
+    console.log(valuePixProps);
+    const formatterValues = {
+      transaction_amount: valuePixProps,
+      payment_method_id: 'pix',
+      payer: {
+        first_name: values.nome,
+        last_name: values.nome,
+        email: values.email,
+        identification: {
+          type: 'CPF',
+          number: values.cpf,
+        },
+      },
+      description: 'Testando PIX',
+    };
+    try {
+      console.log(formatterValues);
+      await createInscricao.mutateAsync(formatterValues);
+    } catch (err) {
+      console.log('error', err.message);
+    }
   };
 
   const isWideVersion = useBreakpointValue({

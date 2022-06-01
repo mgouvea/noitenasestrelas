@@ -110,9 +110,9 @@ export function Footer() {
             >
               <FaInstagram />
             </Link>
-            <Link href={'#'} isExternal>
+            {/* <Link href={'#'} isExternal>
               <MdEmail />
-            </Link>
+            </Link> */}
             <Link
               href={
                 'https://api.whatsapp.com/send?phone=5561998568926&text=Ol%C3%A1%2C%20quero%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Noite%20nas%20Estrelas!'

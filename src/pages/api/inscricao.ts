@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import { mp } from '../../services/mercadoPago';
 // import { connectToDatabase } from '../../../services/mongodb';
 
 const handlerCreateVegetal = async (
@@ -10,10 +11,28 @@ const handlerCreateVegetal = async (
 
     switch (method) {
       case 'POST':
-        // acesso ao mongoDB
-        // const { db } = await connectToDatabase();
-        // const data = await db.collection('vegetal').insertOne(req.body);
-        // res.status(200).json(data.ops[0]);
+        const mercadopago = require('mercadopago');
+        mercadopago.configurations.setAccessToken(process.env.ACCESS_TOKEN_MP);
+
+        const payment_data = {
+          transaction_amount: 100,
+          description: 'Noite nas Estrelas',
+          payment_method_id: 'pix',
+          payer: {
+            email: req.body.email,
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            identification: {
+              type: req.body.identification.type,
+              number: req.body.identification.number,
+            },
+          },
+        };
+
+        mercadopago.payment
+          .create(payment_data)
+          .then(function (data) {})
+          .catch(function (error) {});
 
         break;
       default:
